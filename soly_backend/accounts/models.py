@@ -4,7 +4,6 @@ class User(models.Model):
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=128)
-    full_name = models.CharField(max_length=200,default=None)
     profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
     is_streamer = models.BooleanField(default=False)  # Initially False
     bio = models.TextField(blank=True, null=True)
